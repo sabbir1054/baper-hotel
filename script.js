@@ -60,6 +60,7 @@ const displayFood = (foods) => {
 };
 //Get selected food
 const getFoodDetails = async (foodId) => {
+  clearModal();
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`;
   const res = await fetch(url);
   const data = await res.json();
@@ -85,5 +86,5 @@ const displayFoodDetails = (meal) => {
 //clear modal
 const clearModal = () => {
   const modalBody = document.getElementById("modal-body");
-  modalBody.textContent = '';
-}
+  modalBody.textContent = "";
+};
