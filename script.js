@@ -81,3 +81,9 @@ const displayFoodDetails = (meal) => {
   `;
   modalBody.appendChild(div);
 };
+
+//clear modal
+const clearModal = () => {
+  const modalBody = document.getElementById("modal-body");
+  modalBody.textContent = '';
+}
